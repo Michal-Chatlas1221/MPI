@@ -147,7 +147,7 @@ int main (int argc, char* argv[])
     MPI_Comm_rank (MPI_COMM_WORLD, &rank);        /* get current process id */
     MPI_Comm_size (MPI_COMM_WORLD, &size);        /* get number of processes */
 
-    for (int i = 0; i<10; i++) {
+    while (1) {
         state = DESK;
         acquireResource(rank, round, size);
         state = LAPTOP;
